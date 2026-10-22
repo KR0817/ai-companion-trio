@@ -1,0 +1,130 @@
+{
+  "release": "v1.0.0",
+  "date": "2026-10-23",
+  "atlas": "spritesheet.webp",
+  "sha256": "d46d77ee483b9d78731386c05112265e1f8182af71f7af4c95ae45a3af8d9280",
+  "encoded_bytes": 3328574,
+  "geometry": {
+    "width": 1536,
+    "height": 2288,
+    "cell_width": 192,
+    "cell_height": 208,
+    "used_cells": 73,
+    "empty_padding_cells": 15,
+    "standard_states": 9,
+    "look_directions": 16
+  },
+  "structural_validation_passed": true,
+  "pets_mcp": {
+    "valid": true,
+    "file_size_bytes": 3328574,
+    "mime_type": "image/webp",
+    "width": 1536,
+    "height": 2288,
+    "sprite_version": 2,
+    "cell_width": 192,
+    "cell_height": 208,
+    "frames_per_row": [
+      6,
+      8,
+      8,
+      4,
+      5,
+      8,
+      6,
+      6,
+      6,
+      8,
+      8
+    ],
+    "errors": []
+  },
+  "quality_gate_passed": true,
+  "jump": {
+    "idle_baseline": 196,
+    "jump_baselines": [
+      196,
+      161,
+      135,
+      167,
+      196
+    ],
+    "airborne_lift_pixels": 61,
+    "landing_delta_pixels": 0
+  },
+  "look_registration": {
+    "neutral_center_x": 96.0,
+    "look_centers_x": [
+      98.5,
+      97.5,
+      97.0,
+      97.0,
+      97.5,
+      97.5,
+      98.0,
+      98.0,
+      97.5,
+      97.5,
+      97.5,
+      97.5,
+      97.5,
+      97.5,
+      97.5,
+      97.5
+    ],
+    "look_widths": [
+      173,
+      173,
+      174,
+      172,
+      173,
+      173,
+      178,
+      174,
+      175,
+      175,
+      171,
+      169,
+      175,
+      175,
+      173,
+      173
+    ],
+    "maximum_center_drift_pixels": 2.5,
+    "maximum_width_ratio": 1.0532544378698225
+  },
+  "blind_review": {
+    "reviewers": 3,
+    "cardinals_passed": true,
+    "tested_axes": 28,
+    "matched_axes": 27,
+    "ambiguous_intermediate_axes": 1
+  },
+  "reviewed_visual_notes": [
+    "112.5-degree gaze has clear rightward yaw but subtle downward pitch; blind majority rated its vertical axis ambiguous. All four cardinals passed.",
+    "Look-row boundaries have modest pose-scale changes; 337.5 to 000 area ratio is 1.19. All default quality geometry thresholds passed.",
+    "Reported bottom-row alpha gaps are spaces between shoes; no material interior body hole was detected.",
+    "Rightward gait is a framewise mirror of the approved leftward gait with temporal order preserved. Orange and blue screen positions reverse during that gait.",
+    "The new props appear in working and review states; the original book remains in other applicable states."
+  ],
+  "browser_preview": {
+    "verified": true,
+    "scales": [
+      1,
+      2
+    ],
+    "backgrounds": [
+      "light",
+      "dark"
+    ],
+    "states": [
+      "running",
+      "review",
+      "jumping",
+      "idle"
+    ]
+  },
+  "native_activation_verified": false,
+  "native_task_events_verified": false,
+  "validation_scope": "Recorded checks apply to the unmodified release atlas. Source edits require new visual review."
+}

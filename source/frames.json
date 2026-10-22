@@ -1,0 +1,247 @@
+{
+  "sprite_version": 2,
+  "cell_size": [
+    192,
+    208
+  ],
+  "atlas_size": [
+    1536,
+    2288
+  ],
+  "rows": [
+    {
+      "state": "idle",
+      "row": 0,
+      "frames": [
+        "frames/idle/00.png",
+        "frames/idle/01.png",
+        "frames/idle/02.png",
+        "frames/idle/03.png",
+        "frames/idle/04.png",
+        "frames/idle/05.png"
+      ],
+      "durations_ms": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ]
+    },
+    {
+      "state": "running-right",
+      "row": 1,
+      "frames": [
+        "frames/running-right/00.png",
+        "frames/running-right/01.png",
+        "frames/running-right/02.png",
+        "frames/running-right/03.png",
+        "frames/running-right/04.png",
+        "frames/running-right/05.png",
+        "frames/running-right/06.png",
+        "frames/running-right/07.png"
+      ],
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ]
+    },
+    {
+      "state": "running-left",
+      "row": 2,
+      "frames": [
+        "frames/running-left/00.png",
+        "frames/running-left/01.png",
+        "frames/running-left/02.png",
+        "frames/running-left/03.png",
+        "frames/running-left/04.png",
+        "frames/running-left/05.png",
+        "frames/running-left/06.png",
+        "frames/running-left/07.png"
+      ],
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ]
+    },
+    {
+      "state": "waving",
+      "row": 3,
+      "frames": [
+        "frames/waving/00.png",
+        "frames/waving/01.png",
+        "frames/waving/02.png",
+        "frames/waving/03.png"
+      ],
+      "durations_ms": [
+        140,
+        140,
+        140,
+        280
+      ]
+    },
+    {
+      "state": "jumping",
+      "row": 4,
+      "frames": [
+        "frames/jumping/00.png",
+        "frames/jumping/01.png",
+        "frames/jumping/02.png",
+        "frames/jumping/03.png",
+        "frames/jumping/04.png"
+      ],
+      "durations_ms": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ]
+    },
+    {
+      "state": "failed",
+      "row": 5,
+      "frames": [
+        "frames/failed/00.png",
+        "frames/failed/01.png",
+        "frames/failed/02.png",
+        "frames/failed/03.png",
+        "frames/failed/04.png",
+        "frames/failed/05.png",
+        "frames/failed/06.png",
+        "frames/failed/07.png"
+      ],
+      "durations_ms": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ]
+    },
+    {
+      "state": "waiting",
+      "row": 6,
+      "frames": [
+        "frames/waiting/00.png",
+        "frames/waiting/01.png",
+        "frames/waiting/02.png",
+        "frames/waiting/03.png",
+        "frames/waiting/04.png",
+        "frames/waiting/05.png"
+      ],
+      "durations_ms": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ]
+    },
+    {
+      "state": "running",
+      "row": 7,
+      "frames": [
+        "frames/running/00.png",
+        "frames/running/01.png",
+        "frames/running/02.png",
+        "frames/running/03.png",
+        "frames/running/04.png",
+        "frames/running/05.png"
+      ],
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ]
+    },
+    {
+      "state": "review",
+      "row": 8,
+      "frames": [
+        "frames/review/00.png",
+        "frames/review/01.png",
+        "frames/review/02.png",
+        "frames/review/03.png",
+        "frames/review/04.png",
+        "frames/review/05.png"
+      ],
+      "durations_ms": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ]
+    },
+    {
+      "state": "look-first",
+      "row": 9,
+      "frames": [
+        "frames/look-first/00.png",
+        "frames/look-first/01.png",
+        "frames/look-first/02.png",
+        "frames/look-first/03.png",
+        "frames/look-first/04.png",
+        "frames/look-first/05.png",
+        "frames/look-first/06.png",
+        "frames/look-first/07.png"
+      ],
+      "angles_degrees": [
+        0.0,
+        22.5,
+        45.0,
+        67.5,
+        90.0,
+        112.5,
+        135.0,
+        157.5
+      ]
+    },
+    {
+      "state": "look-second",
+      "row": 10,
+      "frames": [
+        "frames/look-second/00.png",
+        "frames/look-second/01.png",
+        "frames/look-second/02.png",
+        "frames/look-second/03.png",
+        "frames/look-second/04.png",
+        "frames/look-second/05.png",
+        "frames/look-second/06.png",
+        "frames/look-second/07.png"
+      ],
+      "angles_degrees": [
+        180.0,
+        202.5,
+        225.0,
+        247.5,
+        270.0,
+        292.5,
+        315.0,
+        337.5
+      ]
+    }
+  ]
+}

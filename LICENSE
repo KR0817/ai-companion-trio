@@ -1,0 +1,13 @@
+AI Companion Trio uses separate licenses for artwork and original code.
+
+Artwork, including spritesheet.webp, source/frames/, and visual previews:
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0). See LICENSES/CC-BY-NC-SA-4.0.txt and NOTICE.md.
+The upstream reference artwork retains its respective license and attribution.
+
+Original code and documentation, excluding artwork, third-party notices and
+third-party license texts: MIT. See LICENSES/MIT.txt.
+
+The artwork is available for noncommercial sharing and adaptation with
+attribution and ShareAlike. It is not offered under a permissive commercial
+software license. No trademark, endorsement or official affiliation is granted.

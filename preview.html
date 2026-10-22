@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三人同行 · 动作预览</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f2ed;color:#302b39;font:16px system-ui,"Microsoft YaHei",sans-serif;padding:32px}main{max-width:920px;margin:auto}h1{margin-bottom:8px;font-size:30px}p{color:#726879;line-height:1.7}.layout{display:grid;grid-template-columns:1fr 220px;gap:20px;margin-top:24px}#stage{min-height:420px;background:#e9e3ec;border:1px solid #d5cbdc;border-radius:24px;display:grid;place-items:center;position:relative;overflow:hidden}#stage.dark{background:#292433}#pet{width:192px;height:208px;background-image:url('spritesheet.webp');background-size:1536px 2288px;background-repeat:no-repeat;transform:scale(var(--scale,1))}#status{position:absolute;top:20px;left:22px;background:#ffffffdc;color:#51465c;border-radius:20px;padding:8px 14px;font-size:13px}aside{display:flex;flex-direction:column;gap:6px}button{font:inherit;text-align:left;border:1px solid #d5cbdc;background:#fff;color:#554960;border-radius:10px;padding:10px 14px;cursor:pointer}button[aria-pressed=true]{background:#5f4b72;color:#fff;border-color:#5f4b72}label{display:block;margin-top:12px;font-size:14px}a{color:#73578b}.note{font-size:13px}footer{margin-top:22px}@media(max-width:680px){body{padding:20px}.layout{grid-template-columns:1fr}#stage{min-height:330px}aside{display:grid;grid-template-columns:1fr 1fr}}
+</style>
+<main>
+<h1>三人同行</h1><p>GPT 龙娘、Claude 橙书娘和 DeepSeek 大肥鱼，一起陪你工作。</p>
+<div class="layout"><div id="stage"><div id="status">待机</div><div id="pet" role="img" aria-label="三人组合桌宠动画"></div></div><aside><div id="states"></div><label><input id="dark" type="checkbox"> 深色背景</label><label><input id="slow" type="checkbox"> 慢速检查</label><label><input id="large" type="checkbox"> 放大至两倍</label><label><input id="look" type="checkbox"> 跟随鼠标视线</label></aside></div>
+<footer><p class="note">本地预览读取最终图集和动作帧时长。此页用于检查素材播放；原生桌宠的启用与任务事件需在 Codex 中确认。</p><a href="docs/images/contact-sheet.png">查看全部帧</a> · <a href="docs/validation.json">查看校验记录</a></footer>
+</main>
+<script>
+const labels=['待机','向右行走','向左行走','挥手','跳跃','遇到困难','等待回应','共同工作','检查成果'];
+const durations=[[280,110,110,140,140,320],[120,120,120,120,120,120,120,220],[120,120,120,120,120,120,120,220],[140,140,140,280],[140,140,140,140,280],[140,140,140,140,140,140,140,240],[150,150,150,150,150,260],[120,120,120,120,120,220],[150,150,150,150,150,280]];
+const pet=document.querySelector('#pet'),stage=document.querySelector('#stage'),status=document.querySelector('#status');
+let row=0,frame=0,next=0,angle=null;
+labels.forEach((label,index)=>{const button=document.createElement('button');button.textContent=label;button.setAttribute('aria-pressed',String(index===0));button.onclick=()=>{row=index;frame=0;next=0;angle=null;document.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));status.textContent=label};document.querySelector('#states').append(button)});
+document.querySelector('#dark').onchange=e=>stage.classList.toggle('dark',e.target.checked);
+document.querySelector('#large').onchange=e=>pet.style.setProperty('--scale',e.target.checked?'2':'1');
+stage.onpointermove=e=>{const r=pet.getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2;angle=Math.hypot(dx,dy)>30?Math.round(((Math.atan2(dx,-dy)*180/Math.PI+360)%360)/22.5)%16:null};
+stage.onpointerleave=()=>{angle=null;next=0};
+function cell(r,c){pet.style.backgroundPosition=`${-192*c}px ${-208*r}px`;pet.dataset.cell=`${r},${c}`}
+function tick(time){if(document.querySelector('#look').checked&&angle!==null){cell(9+Math.floor(angle/8),angle%8);status.textContent=`注视 ${angle*22.5}°`}else if(time>=next){cell(row,frame);status.textContent=labels[row];next=time+durations[row][frame]*(document.querySelector('#slow').checked?2:1);frame=(frame+1)%durations[row].length}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script>
+</html>
